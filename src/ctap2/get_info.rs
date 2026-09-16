@@ -24,13 +24,13 @@ pub(crate) fn handle_get_info() -> Vec<u8> {
         (
             Value::Integer(4i64.into()),
             Value::Map(vec![
-                (Value::Text("plat".to_string()), Value::Bool(false)),
                 (Value::Text("rk".to_string()), Value::Bool(true)),
+                (Value::Text("up".to_string()), Value::Bool(true)),
                 // Built-in user verification: pinentry prompts for a passphrase.
                 // Reported as supported *and configured*, so clients use internal UV
                 // rather than trying to negotiate clientPIN (which we don't implement).
                 (Value::Text("uv".to_string()), Value::Bool(true)),
-                (Value::Text("up".to_string()), Value::Bool(true)),
+                (Value::Text("plat".to_string()), Value::Bool(false)),
             ]),
         ),
         // 0x05 maxMsgSize

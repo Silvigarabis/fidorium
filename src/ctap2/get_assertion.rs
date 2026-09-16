@@ -132,11 +132,11 @@ pub(crate) async fn handle_get_assertion(
         (
             Value::Integer(1i64.into()),
             Value::Map(vec![
+                (Value::Text("id".to_string()), Value::Bytes(cred_id)),
                 (
                     Value::Text("type".to_string()),
                     Value::Text("public-key".to_string()),
                 ),
-                (Value::Text("id".to_string()), Value::Bytes(cred_id)),
             ]),
         ),
         (Value::Integer(2i64.into()), Value::Bytes(auth_data)),
